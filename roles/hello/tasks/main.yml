@@ -1,3 +1,8 @@
-- name: Print my_var variable
+- name: Print greeting variable
   debug:
     msg: "{{ my_var }}, this is from the hello role!"
+
+- name: Render greeting template
+  template:
+    src: greeting.txt.j2
+    dest: /tmp/greeting.txt
