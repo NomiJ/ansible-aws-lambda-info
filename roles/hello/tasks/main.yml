@@ -1,8 +1,8 @@
-- name: Print greeting variable
+- name: Show message if my_var is 'Welcome'
   debug:
-    msg: "{{ my_var }}, this is from the hello role!"
+    msg: "This is a special welcome!"
+  when: my_var == "Welcome"
 
-- name: Render greeting template
-  template:
-    src: greeting.txt.j2
-    dest: /tmp/greeting.txt
+- name: Show generic message
+  debug:
+    msg: "my_var is: {{ my_var }}"
