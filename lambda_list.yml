@@ -1,0 +1,15 @@
+- name: List Lambda functions
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Fetch Lambda list
+      amazon.aws.lambda_info:
+        region: ap-south-2
+        profile: 88HoursDevOps
+
+    - name: Show function names
+      debug:
+        msg: "{{ item.function_name }}"
+      loop: "{{ lambda_info.functions }}"
