@@ -1,0 +1,3 @@
+- name: Restart Dummy
+  debug:
+    msg: "Handler triggered: Dummy service restarted"

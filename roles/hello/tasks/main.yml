@@ -3,14 +3,13 @@
     msg: "This is a special welcome!"
   when: my_var != "Welcome"
 
-- name: Show generic message
-  debug:
-    msg: "my_var is: {{ my_var }}"
-
 - name: Loop over a list of items
   debug:
-    msg: "Item: {{ item }}"
+    msg: "Item: {{ my_list }}"
   loop:
-    - Apple
-    - Banana
-    - Cherry
+    - 1
+- name: Create file
+  copy:
+    content: "{{ my_list }}"
+    dest: /tmp/my_list.txt
+  notify: Restart Dummy

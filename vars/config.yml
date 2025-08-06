@@ -1,0 +1,7 @@
+my_var: "Loaded from file"
+my_list:
+  - Red
+  - Green
+  - Blue
+  - Yellow
+  - Purple
