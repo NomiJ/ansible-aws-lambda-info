@@ -7,7 +7,6 @@
     - name: Fetch Lambda list
       amazon.aws.lambda_info:
         region: ap-southeast-2
-        profile: 88HoursDevOps
       register: lambda_info
 
     - name: Show function names
