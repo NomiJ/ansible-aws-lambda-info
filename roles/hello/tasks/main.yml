@@ -1,8 +1,16 @@
 - name: Show message if my_var is 'Welcome'
   debug:
     msg: "This is a special welcome!"
-  when: my_var == "Welcome"
+  when: my_var != "Welcome"
 
 - name: Show generic message
   debug:
     msg: "my_var is: {{ my_var }}"
+
+- name: Loop over a list of items
+  debug:
+    msg: "Item: {{ item }}"
+  loop:
+    - Apple
+    - Banana
+    - Cherry

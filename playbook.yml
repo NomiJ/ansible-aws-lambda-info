@@ -1,6 +1,6 @@
-- name: Run hello role
+- name: Load vars from file
   hosts: web
-  vars:
-    my_var: "Hello"
+  vars_files:
+    - vars/config.yml
   roles:
     - hello
