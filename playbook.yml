@@ -1,0 +1,6 @@
+- name: Run hello role
+  hosts: web
+  vars:
+    my_var: "Hello"
+  roles:
+    - hello
