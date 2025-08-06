@@ -1,5 +1,6 @@
 - name: Load vars from file
   hosts: web
+  gather_facts: true
   vars_files:
     - vars/config.yml
   roles:

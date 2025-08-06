@@ -1,3 +1,8 @@
+- name: Show OS info
+  debug:
+    msg: "OS is {{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+
 - name: Show message if my_var is 'Welcome'
   debug:
     msg: "This is a special welcome!"
@@ -13,3 +18,4 @@
     content: "{{ my_list }}"
     dest: /tmp/my_list.txt
   notify: Restart Dummy
+  
