@@ -24,7 +24,5 @@ jobs:
 
       - name: Run Ansible playbook
         run: |
-          ansible-playbook lambda_list.yml
-        env:
-          AWS_PROFILE: ${{ secrets.AWS_PROFILE }}
-
+          ansible-playbook playbook.yml -i inventory.ini
+        
