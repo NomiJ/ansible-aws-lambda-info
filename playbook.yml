@@ -5,4 +5,9 @@
     - vars/config.yml
   roles:
     - hello
-    - hello2
+  tasks:
+    - name: Include database role
+      include_role:
+        name: hello2
+      vars:
+        app_path: mydb
