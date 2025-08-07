@@ -19,3 +19,7 @@
     dest: /tmp/my_list.txt
   notify: Restart Dummy
   
+# Role A: set fact
+- name: Set app path
+  set_fact:
+    app_path: "/tmp/my_list.txt"

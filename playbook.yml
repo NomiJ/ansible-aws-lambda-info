@@ -3,6 +3,6 @@
   gather_facts: true
   vars_files:
     - vars/config.yml
-    - vars/secrets.yml
   roles:
     - hello
+    - hello2

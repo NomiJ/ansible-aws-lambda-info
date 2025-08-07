@@ -1,0 +1,5 @@
+
+# Role B: use it
+- name: Print app path
+  debug:
+    msg: "{{ app_path }}"

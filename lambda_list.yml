@@ -2,7 +2,9 @@
   hosts: localhost
   connection: local
   gather_facts: false
-
+  vars_files:
+    - vars/config.yml
+    - vars/secrets.yml
   tasks:
     - name: Fetch Lambda list
       amazon.aws.lambda_info:
